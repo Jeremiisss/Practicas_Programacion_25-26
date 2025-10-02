@@ -136,10 +136,10 @@ public class Main {
         System.out.println("Introduce el valor del segundo numero No se puede ultilizar el 0");
         double num4 = sc9.nextDouble();
 
-        System.out.println("La suma es" + (num1 + num2));
-        System.out.println("La resta es" + (num1 - num2));
-        System.out.println("La multiplicacion es" + (num1 * num2));
-        System.out.println("La division es" + (num1 / num2));
+        System.out.println("La suma es " + (num3 + num4));
+        System.out.println("La resta es " + (num3 - num4));
+        System.out.println("La multiplicacion es " + (num3 * num4));
+        System.out.println("La division es " + (num3 / num4));
 
         //Ejercicio 12
         System.out.println("Ejercicio 12");
@@ -160,8 +160,8 @@ public class Main {
         System.out.println("Un numero");
         double num7 = sc11.nextDouble();
 
-        System.out.println("El valor es " + (num7 >= 0));
-
+        System.out.println("El numero es positivo " + (num7 >= 0));
+        System.out.println("El numero es negativo " + (num7 < 0));
     }
 
 }
