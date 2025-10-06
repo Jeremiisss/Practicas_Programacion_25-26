@@ -19,7 +19,7 @@ public class Main {
         System.out.println("Area: " + area);
 
         //Ejercicio 3
-        System.out.println("Ejercicio 03");
+        System.out.println("Ejercicio 03\n");
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Introduce el valor del lado del cuadrado");
@@ -31,7 +31,7 @@ public class Main {
         System.out.println("Area: " + area2);
 
         //Ejercicio 4
-        System.out.println("Ejercicio 04");
+        System.out.println("Ejercicio 04\n");
         Scanner sc2 = new Scanner(System.in);
 
         System.out.println("Introduce el valor del primer numero");
@@ -46,18 +46,18 @@ public class Main {
         System.out.println("La division es" + (num1 / num2));
 
         //Ejercicio 5
-        System.out.println("Ejercicio 05");
+        System.out.println("Ejercicio 05\n");
         Scanner sc3 = new Scanner(System.in);
 
         System.out.println("Radio");
         double radio = sc3.nextDouble();
 
-        System.out.println("Longitud circunferencia: " + (2 * Math.PI * (radio)));
-        System.out.println("Area del circulo: " + (Math.PI * (radio * radio)));
-        System.out.println("Volumen de la esfera: " + ( 4 * (Math.PI * (radio * radio * radio)))/3);
+        System.out.println("Longitud circunferencia: " + ( 2 * Math.PI * (radio)));
+        System.out.println("Area del circulo: " + ( Math.PI + Math.pow(radio, 2)));
+        System.out.println("Volumen de la esfera: " + ( (4.0/3.0) * (Math.PI *  (Math.pow(radio, 3)))));
 
         //Ejercicio 6
-        System.out.println("Ejercicio 06");
+        System.out.println("Ejercicio 06\n");
         Scanner sc4 = new Scanner(System.in);
 
         System.out.println("Precio de articulo");
@@ -66,19 +66,19 @@ public class Main {
         System.out.println("Precio de venta");
         double precio_venta = sc4.nextDouble();
 
-        System.out.println("Precio con descuento " + ((precio_articulo - precio_venta) / precio_articulo) * 100);
+        System.out.println("Precio con descuento " + ((precio_articulo - precio_venta) / precio_articulo) * 100 + "%");
 
         //Ejercicio 7
-        System.out.println("Ejercicio 07");
+        System.out.println("Ejercicio 07\n");
         Scanner sc5 = new Scanner(System.in);
 
         System.out.println("Escriba la distancia en millas marinas");
         double millas = sc5.nextDouble();
 
-        System.out.println("La distancia en metros " + millas * 1.852 );
+        System.out.println("La distancia en metros " + millas * 1852.0 );
 
         //Ejercicio 8
-        System.out.println("Ejercicio 08");
+        System.out.println("Ejercicio 08\n");
         Scanner sc6 = new Scanner(System.in);
 
         System.out.println("Escriba numero uno");
@@ -87,14 +87,12 @@ public class Main {
         System.out.println("Escriba numero dos");
         double numerodos = sc6.nextDouble();
 
-        double maximo = Math.max(numerouno, numerodos);
-        double minimo = Math.min(numerouno, numerodos);
-
-        System.out.println("Resultado " + minimo + " " + maximo);
+        System.out.println("El orden ascendente es: " + Math.min(numerouno, numerodos)
+                + " , " + Math.max(numerouno, numerodos));
 
 
         //Ejercicio 9
-        System.out.println("Ejercicio 09");
+        System.out.println("Ejercicio 09\n");
         Scanner sc7 = new Scanner(System.in);
 
         System.out.println("Escriba numero uno");
@@ -103,12 +101,11 @@ public class Main {
         System.out.println("Escriba numero dos");
         double numero2 = sc7.nextDouble();
 
-        System.out.println("Numero uno es mayor que numero dos " + (numero1 > numero2));
-        System.out.println("Numero dos es mayor que numero uno " + (numero1 < numero2));
-        System.out.println("Numero uno es igual que numero dos " + (numero1 == numero2));
+        System.out.println("El numero mayor es: " + Math.max(numero1, numero2));
+        System.out.println("¿Los numeros son iguales? " + (numero1 == numero2));
 
         //Ejercicio 10
-        System.out.println("Ejercicio 10");
+        System.out.println("Ejercicio 10\n");
         Scanner sc8 = new Scanner(System.in);
 
         System.out.println("Escribir numero uno ");
@@ -120,20 +117,18 @@ public class Main {
         System.out.println("Escribir numero tres ");
         double tres = sc8.nextDouble();
 
-        double maximo1 = Math.max( uno, dos);
-        double maximo2 = Math.max( dos, tres);
-        double maximo3 = Math.max(maximo1, maximo2);
+        double maximo = Math.max(Math.max(uno, dos), tres);
 
-        System.out.println("El numero mayor es el " + maximo3);
+        System.out.println("El valor maximo es: " + maximo);
 
         //Ejercicio 11
-        System.out.println("Ejercicio 11");
+        System.out.println("Ejercicio 11\n");
         Scanner sc9 = new Scanner(System.in);
 
         System.out.println("Introduce el valor del primer numero");
         double num3 = sc9.nextDouble();
 
-        System.out.println("Introduce el valor del segundo numero No se puede ultilizar el 0");
+        System.out.println("Introduce el valor del segundo numero (OJO no puede ser cero)");
         double num4 = sc9.nextDouble();
 
         System.out.println("La suma es " + (num3 + num4));
@@ -142,7 +137,7 @@ public class Main {
         System.out.println("La division es " + (num3 / num4));
 
         //Ejercicio 12
-        System.out.println("Ejercicio 12");
+        System.out.println("Ejercicio 12\n");
         Scanner sc10 = new Scanner(System.in);
 
         System.out.println("Numero uno ");
@@ -154,14 +149,15 @@ public class Main {
         System.out.println("Resultado " + Math.max(num5, num6) );
 
         //Ejercicio 13
-        System.out.println("Ejercicio 13");
+        System.out.println("Ejercicio 13\n");
         Scanner sc11 = new Scanner(System.in);
 
         System.out.println("Un numero");
         double num7 = sc11.nextDouble();
 
-        System.out.println("El numero es positivo " + (num7 >= 0));
-        System.out.println("El numero es negativo " + (num7 < 0));
+        System.out.println("¿El numero es positivo?: " + (num7 >= 0));
+
+        sc.close();
     }
 
 }
