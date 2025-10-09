@@ -113,6 +113,8 @@ public class Main {
 
         //Ejercicio 9
         sc = new Scanner(System.in);
-        System.out.println("");
+        System.out.println("Ejercicio 9");
+
+        System.out.println("Escribe la hora con este formato ");
     }
 }
