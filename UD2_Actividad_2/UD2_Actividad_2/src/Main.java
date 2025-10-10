@@ -6,149 +6,220 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //Ejercicio 1
-
-        System.out.println("Ejercicio1\n");
-
-        System.out.println("Escriba tu edad");
-        int edad = sc.nextInt();
-
-        if (edad >= 18) {
-            System.out.println("Eres mayor de edad");
-        }
-
-
-        //Ejercicio 2
-        System.out.println("Ejercicio2\n");
-
-        System.out.println("Introduce tu edad");
-        int edad2 = sc.nextInt();
-
-        if (edad2 >= 18) {
-            System.out.println("Eres mayor de edad");
-        }
-        else if (edad2 < 18 && edad2 >= 0){
-            System.out.println("Eres menor de edad");
-        }
-        else {
-            System.out.println("La edad no tiene sentido");
-        }
-
-        //Ejercicio 3
-        System.out.println("Ejercicio 3\n");
-
-        for (int i = 1; i <= 20; i++) {
-            System.out.println("El numero es: " +i);
-
-        }
-
-        //Ejercicio 4
-        System.out.println("Ejercicio 4\n");
-
-        for (int i = 2; i <= 200; i += 2) {
-            System.out.println("El numero par es: " + i );
-        }
-
-        //Ejercicio 5
-        System.out.println("Ejercicio 5\n");
-
-        for (int i = 1; i <= 200; i ++) {
-            if ( i % 2 == 0) {
-                System.out.println("El numero es " + i);
-            }
-        }
-
-        //Ejercicio 6
-        sc = new Scanner(System.in);
-        System.out.println("Ejercicio 6");
-
-        System.out.println("Escribe un valor");
-        int random = sc.nextInt();
-
-        for (int i = 1; i <= random; i++) {
-            System.out.println("El numero es: " + i);
-        }
-
-        //Ejercicio 7
-        sc = new Scanner(System.in);
-        System.out.println(System.in);
-
-        System.out.println("Introduce la nota del alumno: ");
-        double nota = sc.nextDouble();
-
-        if (nota < 0.0 || nota > 10.0) {
-            System.out.println("La nota no puede ser negativa");
-        }
-
-        if (nota < 3.0) {
-            System.out.println("La nota es MUY DEFICIENTE");
-        }
-
-        if (nota >=3.0 && nota < 5) {
-            System.out.println("La nota es INSUFICIENTE.");
-        }
-
-        if (nota >= 5.0 && nota < 7) {
-            System.out.println("La nota es BIEN.");
-        }
-
-        if (nota>=7.0 && nota < 9) {
-            System.out.println("La nota es NOTABLE.");
-        } else if (nota >=9 && nota <= 10) {
-            System.out.println("La nota es SOBRESALIENTE");
-        }
-
-        //Ejercicio 8
-        sc = new Scanner(System.in);
-        System.out.println("Ejercicio 8");
-
-        System.out.println("Escribe un valor");
-        int N = sc.nextInt();
-
-        int factorial = 1;
-            for (int i = 1; i <= N; i++) {
-                factorial *= i;
-            }
-            System.out.println("El factorial es " + factorial);
-
-        //Ejercicio 9
-        sc = new Scanner(System.in);
-        System.out.println("Ejercicio 9");
-
-        System.out.println("Introduce las horas (0-23)");
-        int horas = sc.nextInt();
-
-        System.out.println("Introduce los minutos (0-59)");
-        int minutos = sc.nextInt();
-
-        System.out.println("Introduce los segundos (0-59)");
-        int segundos = sc.nextInt();
-
-        segundos = segundos + 1;
-
-        if (segundos == 60) {
-            segundos = 0;
-            minutos = minutos + 1;
-        }
-        if (minutos == 60){
-            minutos = 0;
-            horas = horas + 1;
-        }
-        if (horas == 24){
-            horas = 0;
-        }
-        System.out.println("Hora dentro de un segundo: " + horas + ":" + minutos + ":" + segundos);
+//        //Ejercicio 1
+//
+//        System.out.println("Ejercicio1\n");
+//
+//        System.out.println("Escriba tu edad");
+//        int edad = sc.nextInt();
+//
+//        if (edad >= 18) {
+//            System.out.println("Eres mayor de edad");
+//        }
+//
+//
+//        //Ejercicio 2
+//        System.out.println("Ejercicio2\n");
+//
+//        System.out.println("Introduce tu edad");
+//        int edad2 = sc.nextInt();
+//
+//        if (edad2 >= 18) {
+//            System.out.println("Eres mayor de edad");
+//        }
+//        else if (edad2 < 18 && edad2 >= 0){
+//            System.out.println("Eres menor de edad");
+//        }
+//        else {
+//            System.out.println("La edad no tiene sentido");
+//        }
+//
+//        //Ejercicio 3
+//        System.out.println("Ejercicio 3\n");
+//
+//        for (int i = 1; i <= 20; i++) {
+//            System.out.println("El numero es: " +i);
+//
+//        }
+//
+//        //Ejercicio 4
+//        System.out.println("Ejercicio 4\n");
+//
+//        for (int i = 2; i <= 200; i += 2) {
+//            System.out.println("El numero par es: " + i );
+//        }
+//
+//        //Ejercicio 5
+//        System.out.println("Ejercicio 5\n");
+//
+//        for (int i = 1; i <= 200; i ++) {
+//            if ( i % 2 == 0) {
+//                System.out.println("El numero es " + i);
+//            }
+//        }
+//
+//        //Ejercicio 6
+//        sc = new Scanner(System.in);
+//        System.out.println("Ejercicio 6");
+//
+//        System.out.println("Escribe un valor");
+//        int random = sc.nextInt();
+//
+//        for (int i = 1; i <= random; i++) {
+//            System.out.println("El numero es: " + i);
+//        }
+//
+//        //Ejercicio 7
+//        sc = new Scanner(System.in);
+//        System.out.println(System.in);
+//
+//        System.out.println("Introduce la nota del alumno: ");
+//        double nota = sc.nextDouble();
+//
+//        if (nota < 0.0 || nota > 10.0) {
+//            System.out.println("La nota no puede ser negativa");
+//        }
+//
+//        if (nota < 3.0) {
+//            System.out.println("La nota es MUY DEFICIENTE");
+//        }
+//
+//        if (nota >=3.0 && nota < 5) {
+//            System.out.println("La nota es INSUFICIENTE.");
+//        }
+//
+//        if (nota >= 5.0 && nota < 7) {
+//            System.out.println("La nota es BIEN.");
+//        }
+//
+//        if (nota>=7.0 && nota < 9) {
+//            System.out.println("La nota es NOTABLE.");
+//        } else if (nota >=9 && nota <= 10) {
+//            System.out.println("La nota es SOBRESALIENTE");
+//        }
+//
+//        //Ejercicio 8
+//        sc = new Scanner(System.in);
+//        System.out.println("Ejercicio 8");
+//
+//        System.out.println("Escribe un valor");
+//        int N = sc.nextInt();
+//
+//        int factorial = 1;
+//            for (int i = 1; i <= N; i++) {
+//                factorial *= i;
+//            }
+//            System.out.println("El factorial es " + factorial);
+//
+//        //Ejercicio 9
+//        sc = new Scanner(System.in);
+//        System.out.println("Ejercicio 9");
+//
+//        System.out.println("Introduce las horas (0-23)");
+//        int horas = sc.nextInt();
+//
+//        System.out.println("Introduce los minutos (0-59)");
+//        int minutos = sc.nextInt();
+//
+//        System.out.println("Introduce los segundos (0-59)");
+//        int segundos = sc.nextInt();
+//
+//        segundos = segundos + 1;
+//
+//        if (segundos == 60) {
+//            segundos = 0;
+//            minutos = minutos + 1;
+//        }
+//        if (minutos == 60){
+//            minutos = 0;
+//            horas = horas + 1;
+//        }
+//        if (horas == 24){
+//            horas = 0;
+//        }
+//        System.out.println("Hora dentro de un segundo: " + horas + ":" + minutos + ":" + segundos);
 
         //Ejercicio 10
+//
+//        sc = new Scanner(System.in);
+//        System.out.println("Ejercicio 10");
+//
+//        int numero;
+//
+//        for (int i = 1; i <= 10; i ++){
+//            System.out.println("Introduce el numero " + i + ": ");
+//            numero = sc.nextInt();
+//
+//            while (numero == 0) {
+//            System.out.println("El numero no puede ser 0. Introduce otro: ");
+//            numero = sc.nextInt();
+//            }
+//            if (numero < 0){
+//                System.out.println("Numero negativo");
+//            }
+//            else {
+//                System.out.println("No se ha leido ningun numero negativo.");
+//            }
+//            }
+
+//        //Ejercicio 11
+//
+//        sc = new Scanner(System.in);
+//        System.out.println("Ejercicio 11");
+//
+//        int numero1;
+//
+//        int contadorP = 0;
+//        int contadorN = 0;
+//
+//        for (int i = 1; i <= 10; i ++){
+//            System.out.println("Introduce el numero " + i + ": ");
+//            numero1 = sc.nextInt();
+//
+//            while (numero1 == 0) {
+//                System.out.println("El numero no puede ser 0. Introduce otro: ");
+//                numero1 = sc.nextInt();
+//            }
+//            if (numero1 < 0){
+//                System.out.println("Numero negativo");
+//                contadorN = ( contadorN + 1);
+//            }
+//            else {
+//                System.out.println("No se ha leido ningun numero negativo.");
+//                contadorP = contadorP + 1;
+//            }
+//        }
+//        System.out.println("El total de numeros negativos es: " + contadorN);
+//        System.out.println("El total de numeros positivos es: " + contadorP);
+
+        //Ejercicio 12
 
         sc = new Scanner(System.in);
-        System.out.println("Ejercicio 10");
+        System.out.println("Ejercicio 12");
 
-        int numero;
+        int numero1;
 
-        for (int i = 1; i <= 10; i ++){
-            System.out.println("Introduce el numero" + i + "(No nulo): ");
-//            numero = sc.nextInt();
-        }
+        int contadorP = 0;
+        int contadorN = 0;
+
+        do {
+            System.out.println("Introduce el numero: ");
+            numero1 = sc.nextInt();
+
+            if (numero1 < 0){
+                System.out.println("Numero negativo");
+                contadorN = ( contadorN + 1);
+            }
+            else {
+                System.out.println("No se ha leido ningun numero negativo.");
+                contadorP = contadorP + 1;
+            }
+        } while (numero1 != 0);
+
+
+        System.out.println("El total de numeros negativos es: " + contadorN);
+        System.out.println("El total de numeros positivos es: " + contadorP);
+
     }
+
 }
