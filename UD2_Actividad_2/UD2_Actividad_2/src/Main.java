@@ -115,6 +115,40 @@ public class Main {
         sc = new Scanner(System.in);
         System.out.println("Ejercicio 9");
 
-        System.out.println("Escribe la hora con este formato ");
+        System.out.println("Introduce las horas (0-23)");
+        int horas = sc.nextInt();
+
+        System.out.println("Introduce los minutos (0-59)");
+        int minutos = sc.nextInt();
+
+        System.out.println("Introduce los segundos (0-59)");
+        int segundos = sc.nextInt();
+
+        segundos = segundos + 1;
+
+        if (segundos == 60) {
+            segundos = 0;
+            minutos = minutos + 1;
+        }
+        if (minutos == 60){
+            minutos = 0;
+            horas = horas + 1;
+        }
+        if (horas == 24){
+            horas = 0;
+        }
+        System.out.println("Hora dentro de un segundo: " + horas + ":" + minutos + ":" + segundos);
+
+        //Ejercicio 10
+
+        sc = new Scanner(System.in);
+        System.out.println("Ejercicio 10");
+
+        int numero;
+
+        for (int i = 1; i <= 10; i ++){
+            System.out.println("Introduce el numero" + i + "(No nulo): ");
+//            numero = sc.nextInt();
+        }
     }
 }
