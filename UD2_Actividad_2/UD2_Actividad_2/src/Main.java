@@ -224,30 +224,35 @@ public class Main {
         System.out.println("Introduce el numero de horas trabajadas");
         double horas1 = sc.nextDouble();
 
-        System.out.println("Introduce la tarifa por hora (€): ");
-        double tarifa = sc.nextDouble();
+        double tarifa = 25.0;
 
-        double salariobruto;
-        if (horas1 <= 35){
+        double salariobruto = 0.0;
+        double salarioneto = 0.0;
+
+        if (horas1 >= 0 && horas1 <= 35){
             salariobruto = horas1 * tarifa;
-        } else {
-            salariobruto = (35 * tarifa) + ((horas1 - 35) * tarifa * 1.5);
+        } else if (horas1 > 35){
+            salariobruto = 1.5 * tarifa * (horas1 - 35) + 35* tarifa;
         }
-        double impuestos;
-        if (salariobruto <= 500){
-            impuestos = 0;
-        } else if (salariobruto <= 900) {
-            impuestos = (salariobruto - 500) * 0.25;
-        } else {
-            impuestos = (400 * 0.25) + ((salariobruto - 900)* 0.45);
+        else {
+            System.out.println("Las horas trabajadas no pueden ser negativas");
         }
-        double salarioneto = salariobruto - impuestos;
 
-        System.out.println("");
+        if (salariobruto <= 500){
+            salarioneto = salariobruto;
+        }
+        else if (salariobruto > 500 && salariobruto <= 900) {
+            salarioneto = 500 + (salariobruto - 500) *0.75;
+        }
+        else if (salariobruto > 900) {
+            salarioneto = 500 + (salariobruto - 500) *0.75 + (salariobruto - 900) * 0.55;
+        }
+
         System.out.println("Nombre del trabajador: " + nombre);
+        System.out.println("La tarifa por hora es: " + tarifa);
         System.out.println("Salario bruto: " + salariobruto);
-        System.out.println("Impuestos: " + impuestos);
         System.out.println("Salario neto: " + salarioneto );
+        System.out.println("Las tasas aplicadas son: " + (salariobruto - salarioneto));
 
     }
     }
