@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -9,12 +10,12 @@ public class Main {
         System.out.println("Ejercicio 1");
         Scanner scanner = new Scanner(System.in);
 
-        int tamano_array =10;
+        int tamano_array = 10;
         double[] numeros = new double[tamano_array];
 
         System.out.println("Por favor, introduce" + tamano_array + "numeros reales");
 
-        for (int i = 0; i <tamano_array; i++){
+        for (int i = 0; i < tamano_array; i++) {
             System.out.println("Introduce un numero real");
             numeros[i] = scanner.nextDouble();
         }
@@ -28,13 +29,13 @@ public class Main {
         System.out.println("Ejercicio 2");
         Scanner scanner1 = new Scanner(System.in);
 
-        int tamano_array1 =10;
+        int tamano_array1 = 10;
         double[] numeros1 = new double[tamano_array1];
         double sumaTotal = 0.0;
 
         System.out.println("Por favor, introduce " + tamano_array1 + " numeros reales");
 
-        for (int i = 0; i <tamano_array1; i++){
+        for (int i = 0; i < tamano_array1; i++) {
             System.out.println("Introduce un numero real " + (i + 1) + ": ");
             numeros1[i] = scanner1.nextDouble();
 
@@ -45,40 +46,40 @@ public class Main {
         for (int i = 0; i < tamano_array1; i++) {
             System.out.println("Numero " + (i + 1) + ": " + numeros1[i]);
         }
-        System.out.println("La suma total de los numeros es: " +sumaTotal );
+        System.out.println("La suma total de los numeros es: " + sumaTotal);
 
         //Ejercicio 3
         System.out.println("Ejercicio 3");
         Scanner scanner2 = new Scanner(System.in);
 
-        int tamano_array2 =10;
+        int tamano_array2 = 10;
         double[] numeros2 = new double[tamano_array2];
         double minimo = Double.MAX_VALUE;
         double maximo = Double.MIN_VALUE;
 
         System.out.println("Por favor, introduce " + tamano_array2 + " numeros reales");
 
-        for (int i = 0; i <tamano_array2; i++) {
+        for (int i = 0; i < tamano_array2; i++) {
             System.out.println("Introduce un numero real " + (i + 1) + ": ");
             numeros2[i] = scanner2.nextDouble();
         }
 
         for (int i = 0; i < tamano_array2; i++) {
-            if (numeros2[i] > maximo){
+            if (numeros2[i] > maximo) {
                 maximo = numeros2[i];
             }
-            if (numeros2[i] < minimo){
+            if (numeros2[i] < minimo) {
                 minimo = numeros2[i];
             }
         }
-        System.out.println("El número máximo introducido es: " + maximo );
+        System.out.println("El número máximo introducido es: " + maximo);
         System.out.println("El número mínimo introducido es: " + minimo);
 
         //Ejercicio 4
         System.out.println("Ejercicio 4");
         Scanner scanner3 = new Scanner(System.in);
 
-        int tamano_array3 =20;
+        int tamano_array3 = 20;
         int[] numeros3 = new int[tamano_array3];
 
         int sumaPositivos = 0;
@@ -86,19 +87,18 @@ public class Main {
 
         System.out.println("Por favor, introduce " + tamano_array3 + " numeros enteros");
 
-        for (int i = 0; i <tamano_array3; i++){
+        for (int i = 0; i < tamano_array3; i++) {
             System.out.println("Introduce un numero entero " + (i + 1) + ": ");
             numeros3[i] = scanner3.nextInt();
-            if (numeros3[i] >= 0){
+            if (numeros3[i] >= 0) {
                 sumaPositivos += numeros3[i];
-            }
-            else {
+            } else {
                 sumaNegativos += numeros3[i];
             }
         }
 
-        System.out.println("Suma de los números positivos: " +sumaPositivos );
-        System.out.println("Suma de los números positivos: " +sumaNegativos );
+        System.out.println("Suma de los números positivos: " + sumaPositivos);
+        System.out.println("Suma de los números positivos: " + sumaNegativos);
 
         //Ejercicio 5
         System.out.println("Ejercicio 5");
@@ -107,7 +107,7 @@ public class Main {
         double[] numerosReales5 = new double[10];
         double suma5 = 0.0;
 
-        for (int i = 0; i < numerosReales5.length; i++){
+        for (int i = 0; i < numerosReales5.length; i++) {
             System.out.println("Introduce el numero real " + (i + 1) + ": ");
             numerosReales5[i] = scanner4.nextDouble();
         }
@@ -123,15 +123,15 @@ public class Main {
         System.out.println("Introduce el valor M");
         double m = scanner4.nextDouble();
 
-        if (n > 0){
-            double arrayN [] = new double[n];
+        if (n > 0) {
+            double arrayN[] = new double[n];
             Arrays.fill(arrayN, m);
             System.out.println(Arrays.toString(arrayN));
 //            for (int i = 0; i < arrayN.length; i++){
 //                arrayN[i] = m;
 //                System.out.println(arrayN[i]);
 //            }
-        }else {
+        } else {
             System.out.println("No se puede crear arrays negativos");
         }
 
@@ -143,28 +143,29 @@ public class Main {
         System.out.println("Introduce el valor de Q");
         int q = scanner4.nextInt();
 
-        int [] numeros7 = new int[(q-p-1)];
-        for (int i = 0; i <numeros7.length; i++ ){
-            numeros7[i] = p + (i+1);
+        int[] numeros7 = new int[(q - p - 1)];
+        for (int i = 0; i < numeros7.length; i++) {
+            numeros7[i] = p + (i + 1);
             System.out.println(numeros7[i]);
         }
 
         //Ejercicio 8
         scanner4 = new Scanner(System.in);
+        System.out.println("Ejercicio 8");
         double numeros8[] = new double[100];
 
-        for (int i = 0; i < numeros8.length; i++);{
-            numeros8 [i] = Math.random();
+        for (int i = 0; i < numeros8.length; i++) ;
+        {
+            numeros8[i] = Math.random();
         }
         System.out.println("Introduce el valor de R (entre 0 y 1)");
         double r = scanner4.nextDouble();
         int contadorMayores = 0, contadorMenores = 0;
 
-        for (int i = 0; i < numeros8.length; i++){
-            if (numeros8 [i] >= r){
+        for (int i = 0; i < numeros8.length; i++) {
+            if (numeros8[i] >= r) {
                 contadorMayores++;
-            }
-            else {
+            } else {
                 contadorMenores++;
             }
         }
@@ -172,28 +173,31 @@ public class Main {
 
         //Ejercicio 9
         scanner4 = new Scanner(System.in);
+        System.out.println("Ejercicio 9");
         int numeros9[] = new int[100];
 
-        for (int i = 0; i < numeros9.length; i++);{
-            numeros9 [i] = (int) (Math.random() * 10 + 1);
+        for (int i = 0; i < numeros9.length; i++) ;
+        {
+            numeros9[i] = (int) (Math.random() * 10 + 1);
         }
         System.out.println("Introduce el valor N");
         int nBuscar = scanner4.nextInt();
 
-        for (int i = 0; i < numeros9.length; i++){
-            if (numeros9[i] == nBuscar){
-                System.out.println("Aparece en la posicion: " +i);
+        for (int i = 0; i < numeros9.length; i++) {
+            if (numeros9[i] == nBuscar) {
+                System.out.println("Aparece en la posicion: " + i);
             }
         }
         //Ejercicio 10
         scanner4 = new Scanner(System.in);
+        System.out.println("Ejercicio 10");
         System.out.println("Introduce el valor de N");
         int nAlturas = scanner4.nextInt();
-        double [] alturas = new double[nAlturas];
+        double[] alturas = new double[nAlturas];
         double sumaAlturas = 0.0, mediaAlturas = 0.0, maximaAlturas = Double.MIN_VALUE, minimaAlturas = Double.MAX_VALUE;
 
-        for (int i = 0; i < alturas.length; i++){
-            System.out.println("Introduce el valor de la altura " + (i+1) + ": ");
+        for (int i = 0; i < alturas.length; i++) {
+            System.out.println("Introduce el valor de la altura " + (i + 1) + ": ");
             alturas[i] = scanner4.nextDouble();
             sumaAlturas += alturas[i];
         }
@@ -201,15 +205,93 @@ public class Main {
         mediaAlturas = sumaAlturas / alturas.length;
 
         int contadorAlturas = 0;
-        for (int i = 0; i < alturas.length; i++){
+        for (int i = 0; i < alturas.length; i++) {
             maximaAlturas = Math.max(alturas[i], maximaAlturas);
             minimaAlturas = Math.min(alturas[i], minimaAlturas);
-            if (alturas[i] >= mediaAlturas){
+            if (alturas[i] >= mediaAlturas) {
                 contadorAlturas++;
             }
         }
         System.out.println("La media es: " + mediaAlturas);
         System.out.println("la altura maxima es: " + maximaAlturas);
         System.out.println("La altura minima es: " + minimaAlturas);
+
+        //Ejercicio 11
+        scanner4 = new Scanner(System.in);
+        System.out.println("Ejercicio 11");
+
+
+        int[] arrayOriginal = new int[100];
+        int[] arrayInverso = new int[100];
+
+        for (int i = 0; i < arrayOriginal.length; i++) {
+            arrayOriginal[i] = i + 1;
+        }
+
+        for (int i = 0; i < arrayInverso.length; i++) {
+            arrayInverso[i] = arrayOriginal[arrayOriginal.length - 1 - i];
+        }
+
+        System.out.println(Arrays.toString(arrayInverso));
+
+
+        //Ejercicio 12
+        scanner4 = new Scanner(System.in);
+        System.out.println("Ejercicio 11");
+
+        int[] Array = new int[10];
+
+        String opcion = "c";
+
+        int contadorPosicion = 0;
+        do {
+            System.out.println("Escoja la opcion deseada");
+            System.out.println("a. Mostrar valores");
+            System.out.println("b. Introducir valores");
+            System.out.println("c. Salir");
+
+            switch (opcion) {
+                case "a":
+                    System.out.println(Arrays.toString(Array));
+                    break;
+
+                case "b":
+                    scanner4.nextInt();
+                    System.out.println("Introduce la posicion donde quieres insertar el valor: ");
+                    contadorPosicion = scanner4.nextInt();
+                    if (contadorPosicion < Array.length && contadorPosicion >= 0) {
+                        Array[contadorPosicion] = scanner4.nextInt();
+                    } else {
+                        System.out.println("No se puede insertar porque la posicion no coincide");
+                    }
+                    break;
+
+                case "c":
+                    System.out.println("El menu se cerrara");
+                    break;
+                default:
+                    System.out.println("Por favor escoja una opcion correcta");
+            }
+        }
+        while (!opcion.equals("C"));
+
+        //Ejercicio 13
+        scanner4 =new Scanner(System.in);
+        System.out.println("Ejercicio 13");
+
+        System.out.println("Introduce el valor inicial V: ");
+        int vInicial = scanner4.nextInt();
+        System.out.println("Introduce el incremento de I: ");
+        int iInicial = scanner4.nextInt();
+        System.out.println("Introduce la cantidad de valores que se desean obtener: ");
+        int cantidadN = scanner4.nextInt();
+
+        int [] valores = new int[cantidadN];
+        valores[0] = vInicial;
+
+        for (int i = 1; i < valores.length; i++);{
+            valores[i] = valores[i-1] + iInicial;
+        }
+        System.out.println(Arrays.toString(valores));
     }
 }
