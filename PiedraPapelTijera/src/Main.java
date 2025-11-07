@@ -18,9 +18,9 @@ public class Main {
 
         //Instrucciones
 
-        System.out.println("Bienvenido a Piedra, Papel o Tijera prime");
-        System.out.println("Reglas: letra (P para piedra, L para papel, T para tijeras, \n" +
-                "o S para salir terminando la partida)");
+        System.out.println("\nBienvenido a Piedra, Papel o Tijera prime");
+        System.out.println("\nReglas: letra (P para piedra, L para papel, T para tijeras, \n" +
+                "o S para salir terminando la partida");
 
         //Bucle juego
         //el bucle while (true) es un bucle infinito que se repetira hasta que le digamos que pare con un 'break'
@@ -40,14 +40,14 @@ public class Main {
             }
 
             //Usuario
-            System.out.println("Introduce tu jugada (P, L, T) o s para salir: ");
+            System.out.println("\nIntroduce tu jugada (P, L, T) o s para salir: ");
 
             String entrada = sc.next();
             char jugadaUsuario = Character.toLowerCase(entrada.charAt(0));
 
             //Comprobamos si el usuario quiere salir
             if (jugadaUsuario == 's'){
-                System.out.println("Has elegido salir. !El juego ha terminado¡");
+                System.out.println("Has elegido salir. ¡El juego ha terminado!");
                 break;
             }
 
