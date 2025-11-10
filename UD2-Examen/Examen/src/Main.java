@@ -56,19 +56,20 @@ public class Main {
 
                     }
                         break;
-
+                    Integer
                 case "2":
                     for (int i = 0; i < tamanoColeccion.length; i++) {
                         maximoColeccion = Math.max(tamanoColeccion[i], maximoColeccion);
                         minimoColeccion = Math.min(tamanoColeccion[i], minimoColeccion);
-                        media = (tamanoColeccion[i] / tamanoColeccion[i]);
                         suma += tamanoColeccion[i];
-                        System.out.println("La maxima es " + maximoColeccion);
-                        System.out.println("El minimo es " + minimoColeccion);
-                        System.out.println("La suma es " + suma);
-                        System.out.println("El media es " + media);
-
                     }
+                    media = (suma / tamanoColeccion.length);
+
+                    System.out.println("La maxima es " + maximoColeccion);
+                    System.out.println("El minimo es " + minimoColeccion);
+                    System.out.println("La suma es " + suma);
+                    System.out.println("El media es " + media);
+
                     break;
 
                 case "3":
