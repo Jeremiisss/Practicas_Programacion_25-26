@@ -68,6 +68,79 @@ public class Biblioteca {
         return  resultado;
     }
 
+    public Libro getLibroByISBN(String ISBN) {
+        int index = -1;
+        for (int i = 0; i < this.nLibrosActuales; i++) {
+            if (this.libros[i] != null){
+                if (this.libros[i].getISBN().equalsIgnoreCase(ISBN)) {
+                    index = i;
+                    break;
+                }
+            }
+        }
+        if (index == -1) {
+            return null;
+        }else{
+            return this.libros[index];
+        }
+    }
+
+    public boolean eliminarLibro(Libro libro) {
+        boolean resultado = false;
+
+        if (libro != null) {
+            int index = -1;
+            for (int i = 0; i < this.nLibrosActuales; i++) {
+                if (this.libros[i] != null) {
+                    if (this.libros[i].getISBN().equalsIgnoreCase(libro.getISBN())) {
+                        index = i;
+                        break;//para eliminar la primera ocurrencia
+                    }
+                }
+            }
+            if (index != -1) {
+                this.libros[index] = null;
+                resultado = true;
+
+                //Opcion1: Mover solo el ultimo
+                this.libros[index] = this.libros[nLibrosActuales - 1];
+                this.libros[nLibrosActuales - 1] = null;
+                this.nLibrosActuales--;
+
+//                //Opcion2: Recoloco todo el array
+//                for (int i = index +1; i < this.libros.length; i++) {
+//                    this.libros[i-1] = this.libros[i];
+//                }
+//                this.libros[this.libros.length-1] = null;
+//                this.nLibrosActuales--;
+            }
+        }
+
+        return resultado;
+    }
+
+    public String infoBiblioteca() {
+        String infoBiblioteca = String.format("Biblioteca - Nombre: %s, Direccion: %s," +
+                "Email: %s, Numero telefono: %s",this.nombre, this.direccion, this.email, this.nTelefono);
+        return infoBiblioteca;
+    }
+
+    public String infoLibros() {
+        String infoLibro = "";
+
+        if (this.nLibrosActuales > 0) {
+            infoLibro = "";
+            for(int i = 0; i < this.nLibrosActuales; i++) {
+                if (this.libros[i] != null) {
+                    infoLibro += this.libros[i].infoLibro() + "\n";
+                }
+            }
+        }else {
+            infoLibro = "No hay libros";
+        }
+        return infoLibro;
+    }
+
     private void ampliarDimensionBiblioteca(){
         Libro[] librosAux = new Libro[this.libros.length + 5];
         for (int i=0; i<this.libros.length; i++){
@@ -75,4 +148,5 @@ public class Biblioteca {
         }
         this.libros = librosAux;
     }
+
 }
