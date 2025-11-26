@@ -40,10 +40,21 @@ public class cuentaBancaria {
     }
 
     // metodos para obtener datos Getters
-    public String getIban() { return this.iban; }
-    public String getTitular() { return this.titular; }
-    public double getSaldo() { return this.saldo; }
-    public boolean esValida() { return this.esValida; } // para saber si se ha creado bien
+    public String getIban() {
+        return this.iban;
+    }
+
+    public String getTitular() {
+        return this.titular;
+    }
+
+    public double getSaldo() {
+        return this.saldo;
+    }
+
+    public boolean esValida() {
+        return this.esValida;
+    } // para saber si se ha creado bien
 
     // ingresar dinero
     public void ingresar(double cantidad) {

@@ -6,8 +6,4 @@ public class Main {
     public static void main(String[] args) {
 
     }
-    private static boolean validarDNI (String DNI){
-        String validador = "[0-9]{8}[A-Z]$";
-        return Pattern.matches(validador, DNI);
-    }
 }

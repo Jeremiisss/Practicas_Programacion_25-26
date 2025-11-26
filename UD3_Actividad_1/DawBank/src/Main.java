@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         System.out.println("🪙Bienvenido a DawBank - Jeremis Enterprise🪙");
@@ -10,9 +10,9 @@ public class Main {
 
         //pedir que el usuario ponga sus datos
         System.out.print("Introduce el nombre del titular: ");
-        String titular = scanner.nextLine();
+        String titular = sc.nextLine();
         System.out.print("Introduce el IBAN (p. ej., ES6621000418401234567891): ");
-        String iban = scanner.nextLine();
+        String iban = sc.nextLine();
 
         //objeto cuentaBancaria
         cuentaBancaria cuenta = new cuentaBancaria(iban, titular);
@@ -27,7 +27,7 @@ public class Main {
             System.out.println("\n ❌Error: No se pudo crear la cuenta. El IBAN o el titular son incorrectos.❌");
         }
 
-        scanner.close();
+        sc.close();
         System.out.println("Gracias por utilizar DawBank.🙋‍♂️¡Hasta pronto!🙋‍♂️");
     }
 
@@ -39,9 +39,9 @@ public class Main {
             System.out.print("Seleccione una opción: ");
 
             // para comprobar que el usuario escribio un numero
-            if (scanner.hasNextInt()) {
-                opcion = scanner.nextInt();
-                scanner.nextLine();
+            if (sc.hasNextInt()) {
+                opcion = sc.nextInt();
+                sc.nextLine();
 
                 switch (opcion) {
                     case 1: // datos de la cuenta
@@ -59,24 +59,24 @@ public class Main {
                         break;
                     case 5: // ingreso
                         System.out.print("Introduce la cantidad a ingresar: ");
-                        if (scanner.hasNextDouble()) {
-                            double ingreso = scanner.nextDouble();
-                            scanner.nextLine();
+                        if (sc.hasNextDouble()) {
+                            double ingreso = sc.nextDouble();
+                            sc.nextLine();
                             cuenta.ingresar(ingreso);
                         } else {
                             System.out.println("❌Error: Cantidad no válida.❌");
-                            scanner.nextLine();
+                            sc.nextLine();
                         }
                         break;
                     case 6: // retirada
                         System.out.print("Introduce la cantidad a retirar: ");
-                        if (scanner.hasNextDouble()) {
-                            double retirada = scanner.nextDouble();
-                            scanner.nextLine();
+                        if (sc.hasNextDouble()) {
+                            double retirada = sc.nextDouble();
+                            sc.nextLine();
                             cuenta.retirar(retirada);
                         } else {
                             System.out.println("❌Error: Cantidad no válida.❌");
-                            scanner.nextLine();
+                            sc.nextLine();
                         }
                         break;
                     case 7: // movimientos
@@ -89,7 +89,7 @@ public class Main {
                 }
             } else {
                 System.out.println("❌Error: Debe introducir un número del 1 al 8.❌");
-                scanner.nextLine();
+                sc.nextLine();
             }
             System.out.println();
 
