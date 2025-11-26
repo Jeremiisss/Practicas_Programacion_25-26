@@ -10,7 +10,7 @@ public class Pelicula {
     private LocalDate fechaRegistro;
     private LocalDate fechaBaja;
     private LocalDateTime fechaAlquiler;
-    private boolean isAlquilada;
+    private boolean alquilada;
 
     private static int proximoCod = 1; //contador para asignar ID unicos
 
@@ -21,26 +21,35 @@ public class Pelicula {
         this.titulo = titulo;
         this.genero = genero;
         this.fechaRegistro = LocalDate.now(); //guarda la fecha actual
-        this.isAlquilada = false; //cualquier peli nueva no esta alquilada
+        this.alquilada = false; //cualquier peli nueva no esta alquilada
         this.fechaBaja = null; // null significa que no esta dado de baja
         this.fechaAlquiler = null;
     }
 
     // Getters para acceder a los datos desde otra clase
-    public String getCod() { return cod; }
-    public String getTitulo() { return titulo; }
-    public boolean isAlquilada() { return isAlquilada; }
-    public LocalDateTime getFechaAlquiler() { return fechaAlquiler; }
-    public boolean isDeBaja() { return this.fechaBaja != null; }
+    public String getCod()
+        { return cod; }
+
+    public String getTitulo()
+        { return titulo; }
+
+    public boolean getAlquilada()
+        { return alquilada; }
+
+    public LocalDateTime getFechaAlquiler()
+        { return fechaAlquiler; }
+
+    public boolean getbaja()
+        { return fechaBaja == null; }
 
     // para cambiar el estado de la pelicula (alquilar,devolver o darDeBaja)
     public void alquilar() {
-        this.isAlquilada = true;
+        this.alquilada = true;
         this.fechaAlquiler = LocalDateTime.now();
     }
 
     public void devolver() {
-        this.isAlquilada = false;
+        this.alquilada = false;
         this.fechaAlquiler = null;
     }
 
@@ -51,8 +60,8 @@ public class Pelicula {
     // mostrar toda la info de la peli
     public String mostrarInfoPelicula() {
         DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
-        String estado = isAlquilada ? "Alquilada" : "Disponible";
-        if (isDeBaja()) {
+        String estado = alquilada ? "Alquilada" : "Disponible";
+        if (getbaja()) {
             estado = "Dada de Baja (" + this.fechaBaja.format(formatoFecha) + ")";
         }
 
