@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PiedraPapelTijera/PiedraPapelTijera.iml" filepath="$PROJECT_DIR$/PiedraPapelTijera/PiedraPapelTijera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Practicas_Programacion_25-26.iml" filepath="$PROJECT_DIR$/.idea/Practicas_Programacion_25-26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD1_Actividad_1/UD1_Actividad_1.iml" filepath="$PROJECT_DIR$/UD1_Actividad_1/UD1_Actividad_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD2-Examen/UD2-Examen.iml" filepath="$PROJECT_DIR$/UD2-Examen/UD2-Examen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD2_Actividad 3/UD2_Actividad 3.iml" filepath="$PROJECT_DIR$/UD2_Actividad 3/UD2_Actividad 3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD2_Actividad 4/UD2_Actividad 4.iml" filepath="$PROJECT_DIR$/UD2_Actividad 4/UD2_Actividad 4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD2_Actividad 6/UD2_Actividad 6.iml" filepath="$PROJECT_DIR$/UD2_Actividad 6/UD2_Actividad 6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD2_Actividad5/UD2_Actividad5.iml" filepath="$PROJECT_DIR$/UD2_Actividad5/UD2_Actividad5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD2_Actividad_2/UD2_Actividad_2.iml" filepath="$PROJECT_DIR$/UD2_Actividad_2/UD2_Actividad_2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD3_Actividad_1/UD3_Actividad_1.iml" filepath="$PROJECT_DIR$/UD3_Actividad_1/UD3_Actividad_1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UD3_Actividad_2/UD3_Actividad_2.iml" filepath="$PROJECT_DIR$/UD3_Actividad_2/UD3_Actividad_2.iml" />
+    </modules>
+  </component>
+</project>
