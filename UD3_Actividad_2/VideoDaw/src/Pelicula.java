@@ -66,6 +66,7 @@ public class Pelicula {
         if (isDeBaja()) {
             estado = "Dada de Baja (" + this.fechaBaja.format(formatoFecha) + ")";
         }
+
         return String.format("Cód: %s | Nombre: %-25s | Director: %-20s | Género: %-15s | Estado: %s",
                 this.codigo, this.nombre, this.director, this.genero, estado);
     }
