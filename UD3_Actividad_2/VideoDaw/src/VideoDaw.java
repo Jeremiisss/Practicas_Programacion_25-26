@@ -103,9 +103,9 @@ public class VideoDaw {
 
     public String devolverPelicula(Pelicula p, Cliente c) {
         long horas = Duration.between(p.getFechaAlquiler(), LocalDateTime.now()).toHours();
-        String mensaje = "Devolución exitosa.";
+        String mensaje = "🗄️Devolución exitosa.🗄️";
         if (horas > 48) {
-            mensaje = "AVISO: Devolución fuera de plazo (" + horas + " horas). " + mensaje;
+            mensaje = "🕕AVISO: Devolución fuera de plazo (" + horas + " horas). 🕕" + mensaje;
         }
         p.devolver();
         c.devolverPelicula(p);
@@ -122,7 +122,7 @@ public class VideoDaw {
 
     public String mostrarPeliculasRegistradas() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n--- LISTADO DE PELÍCULAS ---\n");
+        sb.append("\n--- 📼LISTADO DE PELÍCULAS📼 ---\n");
         for (int i = 0; i < nPeliculas; i++) {
             sb.append(peliculasRegistradas[i].mostrarInfoPelicula()).append("\n");
         }

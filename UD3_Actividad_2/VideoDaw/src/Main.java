@@ -108,7 +108,7 @@ public class Main {
 
             boolean exito = miVideoclub.registrarCliente(nuevoCliente);
             if (exito) {
-                System.out.println("Cliente registrado con éxito.");
+                System.out.println("✅Cliente registrado con éxito.✅");
             } else {
                 System.out.println("Error: No se pudo registrar al cliente (posiblemente DNI ya existente o videoclub lleno).");
             }
