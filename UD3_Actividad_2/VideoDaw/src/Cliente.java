@@ -51,7 +51,7 @@ public class Cliente {
     public String getNumSocio() { return numSocio; }
     public boolean isDeBaja() { return this.fechaBaja != null; }
     public boolean esValido() { return this.esValido; }
-
+    public String getNombre() { return nombre; }
     // Metodos
     public boolean alquilarPelicula(Pelicula p) {
         if (nPeliculasAlquiladas < MAX_PELICULAS_ALQUILER) {

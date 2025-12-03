@@ -87,17 +87,17 @@ public class VideoDaw {
 
     public String alquilarPelicula(Pelicula p, Cliente c) {
         if (p.isDeBaja() || c.isDeBaja()) {
-            return "Error: No se puede operar con películas o clientes dados de baja.";
+            return "⚠️Error: No se puede operar con películas o clientes dados de baja.⚠️";
         }
         if (p.isAlquilada()) {
-            return "Error: La película '" + p.getNombre() + "' ya está alquilada.";
+            return "⚠️Error: La película '" + p.getNombre() + "' ya está alquilada.⚠️";
         }
         boolean exito = c.alquilarPelicula(p);
         if (exito) {
             p.alquilar();
-            return "Alquiler exitoso: El cliente " + c.getNumSocio() + " ha alquilado " + p.getCodigo();
+            return "✅Alquiler exitoso: El cliente " + c.getNumSocio() + " ha alquilado " + p.getCodigo() + " ✅";
         } else {
-            return "Error: El cliente ha alcanzado el límite de alquileres.";
+            return "⚠️Error: El cliente ha alcanzado el límite de alquileres.⚠️";
         }
     }
 
@@ -132,7 +132,7 @@ public class VideoDaw {
 
     public String mostrarClientesRegistrados() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\n--- LISTADO DE CLIENTES ---\n");
+        sb.append("\n--- 👨‍💼LISTADO DE CLIENTES👨‍💼 ---\n");
         for (int i = 0; i < nClientes; i++) {
             sb.append(clientesRegistrados[i].mostrarInfoCliente()).append("\n");
         }

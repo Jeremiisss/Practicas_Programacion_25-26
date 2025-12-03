@@ -15,7 +15,7 @@ public class Main {
                 scanner.nextLine();
 
                 if (miVideoclub == null && opcion != 1 && opcion != 8) {
-                    System.out.println("Error: Primero debe crear y registrar un videoclub (Opción 1).");
+                    System.out.println("⚠️Error: Primero debe crear y registrar un videoclub (Opción 1).⚠️");
                     continue;
                 }
 
@@ -47,7 +47,7 @@ public class Main {
                     default: System.out.println("❌Opción no válida.❌");
                 }
             } else {
-                System.out.println("Error: Debe introducir un número.");
+                System.out.println("⚠️Error: Debe introducir un número.⚠️");
                 scanner.nextLine();
             }
             System.out.println();
@@ -75,10 +75,10 @@ public class Main {
             if (miVideoclub.registrarPelicula(nuevaPelicula)) {
                 System.out.println("Película registrada con éxito.");
             } else {
-                System.out.println("Error: No se pudo registrar la película (posiblemente el videoclub está lleno).");
+                System.out.println("⚠️Error: No se pudo registrar la película (posiblemente el videoclub está lleno).⚠️");
             }
         } else {
-            System.out.println("Error: Género no válido. La película no ha sido registrada.");
+            System.out.println("⚠️Error: Género no válido. La película no ha sido registrada.⚠️");
         }
     }
 
@@ -102,7 +102,7 @@ public class Main {
             Cliente nuevoCliente = new Cliente(dni, nombre, direccion, fechaNac);
 
             if (!nuevoCliente.esValido()) {
-                System.out.println("Error: Datos del cliente no válidos (DNI incorrecto o menor de edad).");
+                System.out.println("⚠️Error: Datos del cliente no válidos (DNI incorrecto o menor de edad).⚠️");
                 return;
             }
 
@@ -110,10 +110,10 @@ public class Main {
             if (exito) {
                 System.out.println("✅Cliente registrado con éxito.✅");
             } else {
-                System.out.println("Error: No se pudo registrar al cliente (posiblemente DNI ya existente o videoclub lleno).");
+                System.out.println("⚠️Error: No se pudo registrar al cliente (posiblemente DNI ya existente o videoclub lleno).⚠️");
             }
         } else {
-            System.out.println("Error: Formato de fecha o fecha inválida. El cliente no ha sido registrado.");
+            System.out.println("⚠️Error: Formato de fecha o fecha inválida. El cliente no ha sido registrado.⚠️");
         }
     }
 
@@ -153,7 +153,7 @@ public class Main {
     }
 
     public static void mostrarMenu() {
-        System.out.println("📀Gestion de VideoDaw Jeremis experience📀");
+        System.out.println("\n📀Gestion de VideoDaw Jeremis experience📀\n");
         if (miVideoclub != null) {
             System.out.println("Videoclub Activo: CIF " + miVideoclub.getCif());
         }
@@ -170,7 +170,7 @@ public class Main {
 
     private static void gestionarCrearVideoClub() {
         if (miVideoclub != null) {
-            System.out.println("Error: Ya existe un videoclub registrado.");
+            System.out.println("⚠️Error: Ya existe un videoclub registrado.⚠️");
             return;
         }
         System.out.print("Introduce el CIF del videoclub (ej. A12345678): ");
@@ -180,9 +180,9 @@ public class Main {
         VideoDaw nuevoVideoclub = new VideoDaw(cif, direccion);
         if (nuevoVideoclub.esValido()) {
             miVideoclub = nuevoVideoclub;
-            System.out.println("Videoclub registrado con éxito.");
+            System.out.println("✅Videoclub registrado con éxito.✅");
         } else {
-            System.out.println("Error: El CIF es incorrecto. No se ha creado el videoclub.");
+            System.out.println("⚠️Error: El CIF es incorrecto. No se ha creado el videoclub.⚠️");
         }
     }
 
@@ -199,7 +199,7 @@ public class Main {
             String resultado = miVideoclub.alquilarPelicula(p, c);
             System.out.println(resultado);
         } else {
-            System.out.println("Error: Película o cliente no encontrado.");
+            System.out.println("⚠️Error: Película o cliente no encontrado.⚠️");
         }
     }
 
@@ -214,7 +214,7 @@ public class Main {
             String resultado = miVideoclub.devolverPelicula(p, c);
             System.out.println(resultado);
         } else {
-            System.out.println("Error: Película o cliente no encontrado.");
+            System.out.println("⚠️Error: Película o cliente no encontrado.⚠️");
         }
     }
 
@@ -225,9 +225,9 @@ public class Main {
         Cliente c = miVideoclub.buscarClientePorDNI(dni);
         if (c != null) {
             miVideoclub.darBajaCliente(c);
-            System.out.println("Cliente " + c.getNumSocio() + " dado de baja con éxito.");
+            System.out.println("✅Cliente " + c.getNumSocio() + " " +c.getNombre() +" hs sido dado de baja con éxito.✅");
         } else {
-            System.out.println("Error: Cliente no encontrado.");
+            System.out.println("⚠️Error: Cliente no encontrado.⚠️");
         }
     }
 
@@ -238,9 +238,9 @@ public class Main {
         Pelicula p = miVideoclub.buscarPeliculaPorCod(cod);
         if (p != null) {
             miVideoclub.darBajaPelicula(p);
-            System.out.println("Película " + p.getCodigo() + " dada de baja con éxito.");
+            System.out.println("✅Película " + p.getCodigo() + " dada de baja con éxito.✅");
         } else {
-            System.out.println("Error: Película no encontrada.");
+            System.out.println("⚠️Error: Película no encontrada.⚠️");
         }
     }
 }
